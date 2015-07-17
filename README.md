@@ -3,15 +3,15 @@
 
 Instruction:
 
-LAMP is used to run this website.
+- LAMP is used to run this website
 
-Import website.sql file into your database. The fields that needs changing are marked with TODOs.
+- Import website.sql file into your database. The fields that needs changing are marked with TODOs
 
-Go to 'include.php' file and make necessary changes. Also marked as TODOs.
+- Go to 'include.php' file and make necessary changes. Also marked as TODOs
 
-Examine the E-R diagram and relational schema to have a whole grasp of the site.
+- Examine the E-R diagram and relational schema to have a whole grasp of the site
 
-Run 'index.php' on apache server. 
+- Run 'index.php' on apache server
 
 Enjoy!
 
