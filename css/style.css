@@ -1,0 +1,89 @@
+body {
+	background-image: url("../img/bg.jpg");
+	background-size: repeat;
+	min-height:100%;
+	padding-top: 45px;
+}
+html{
+	height:100%;
+	min-height:100%;
+}
+.navbar-fixed-top  { 
+	min-height:30px; 
+}
+.navbar .navbar-brand{ 
+	padding: 0px 12px;font-size: 18px;line-height: 44px; height: 31px;
+	color: #99CCFF;
+}
+.navbar  .navbar-nav > li > a { 
+	padding-top: 3px; padding-bottom: 0px; line-height: 37px; height: 38px;
+}
+.navbar-toggle .icon-bar {
+	width: 22px;
+	height: 2px;
+}
+.navbar-toggle {
+	height: 30px;
+	margin-top: 7px;
+}
+
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
+	color: #99CCFF;
+}
+
+#loginForm {
+	padding-left: 415px;
+	margin-top: 80px;
+}
+
+#description {
+	margin-top: 110px;
+	font-weight: bold;
+	font-size: 1.3em;
+	text-align: center;
+	padding-right: 120px;
+}
+
+.form-group {
+	margin-top: 20px;
+
+}
+
+.alert-success {
+	width: 250px;
+	height: 35px;
+	margin-left: 405px;
+	text-align: center;
+	margin-top: 40px;
+	padding-top: 7px;
+}
+
+.alert-danger {
+	width: 400px;
+	height: 110px;
+	margin-left: 340px;
+	text-align: center;
+	margin-top: 40px;
+	padding-top: 7px;
+}
+
+#submitButton {
+	margin-top: 20px;
+	height: 29px;
+	padding-top: 4px;
+	width: 225px;
+
+}
+.form-control {
+	height: 30px;
+}
+
+.fixed-widthBar { 
+	width:1150px; 
+}
+.fixed-widthDes { 
+	width:1150px; 
+}
+.fixed-widthForm { 
+	width:1150px; 
+}

@@ -1,0 +1,86 @@
+body {
+	background-image: url("../img/bg.jpg");
+	background-size: repeat;
+	min-height:100%;
+	padding-top: 45px;
+}
+html{
+	height:100%;
+	min-height:100%;
+}
+
+.navbar-fixed-top  { 
+	min-height:30px; 
+}
+.navbar .navbar-brand{ 
+	padding: 0px 12px;font-size: 18px;line-height: 44px; height: 31px;
+	color: #99CCFF;
+}
+.navbar  .navbar-nav > li > a { 
+	padding-top: 3px; padding-bottom: 0px; line-height: 37px; height: 38px;
+
+}
+.navbar-toggle .icon-bar {
+	width: 22px;
+	height: 2px;
+}
+.navbar-toggle {
+	height: 30px;
+	margin-top: 7px;
+}
+
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:focus {
+	color: #99CCFF;
+}
+.tab {
+	font-size:1em;
+	color:black;
+	font-family: monospace;
+	margin-top:50px;
+	text-align:center;
+
+}
+#thead {
+	color:red;
+	font-size:1em;
+	font-family: monospace;
+}
+#theadNew {
+	margin-top:50px;
+	color:red;
+	font-size:1em;
+	font-family: monospace;
+}
+.tabNew {
+	font-size:1em;
+	color:black;
+	font-family: monospace;
+	text-align:center;
+}
+#theadNew2 {
+	margin-top:50px;
+	color:red;
+	font-size:1em;
+	font-family: monospace;
+}
+.tabNew2 {
+	font-size:1em;
+	color:black;
+	font-family: monospace;
+	margin-bottom:150px;
+	text-align:center;
+}
+
+#bgImg{
+	background-image: url("http://localhost/website/3.jpg");
+	background-size: cover;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+	background-color: white;
+	border:1px solid black;
+}
+table, th, td {
+	border: 1px solid black;
+}

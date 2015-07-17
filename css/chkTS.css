@@ -1,0 +1,33 @@
+body {
+    background-image: url("../img/bg.jpg");
+    background-size: repeat;
+    min-height:100%;
+    padding-top: 45px;
+}
+html{
+    height:100%;
+    min-height:100%;
+}
+
+.alert-warning {
+    height:70px;
+    text-align: center;
+    width:900px;
+    padding-top:9px;
+    position:absolute;
+    top: 250px;
+    left:460px;
+    font-size:1.1em;
+    padding-left:6px;
+}
+.alert-success {
+    height:53px;
+    text-align: center;
+    width:700px;
+    padding-top:7px;
+    position:absolute;
+    top: 250px;
+    left:570px;
+    font-size:1.1em;
+    padding-left:5px;
+}

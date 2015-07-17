@@ -1,0 +1,81 @@
+body {
+	background-image: url("../img/bg.jpg");
+	background-size: repeat;
+	min-height:100%;
+	padding-top: 45px;
+}
+html{
+	height:100%;
+	min-height:100%;
+}
+
+A:link {text-decoration: none}
+A:visited {text-decoration: none}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline}
+A:link {color:black}
+A:visited {color:black}
+
+.navbar-fixed-top  { 
+	min-height:30px; 
+}
+.navbar .navbar-brand{ 
+	padding: 0px 12px;font-size: 18px;line-height: 44px; height: 31px;
+	color: #99CCFF;
+}
+.navbar  .navbar-nav > li > a { 
+	padding-top: 3px; padding-bottom: 0px; line-height: 37px; height: 38px;
+
+}
+.navbar-toggle .icon-bar {
+	width: 22px;
+	height: 2px;
+}
+.navbar-toggle {
+	height: 30px;
+	margin-top: 7px;
+}
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+	color: #99CCFF;
+}
+.tab {
+	font-size:1em;
+	color:black;
+	font-family: monospace;
+	margin-top:60px;
+
+	width:10%;
+	text-align:center;
+	float:left;
+}
+.tabNew {
+	font-size:1em;
+	color:black;
+	font-family: monospace;
+	margin-top:60px;
+	width:10%;
+	text-align:center;
+	float:left;
+}
+.tabNew2 {
+	font-size:1em;
+	color:black;
+	font-family: monospace;
+	margin-top:60px;
+	width:70%;
+	text-align:center;
+	float:left;
+}
+
+#bgImg{
+	background-image: url("http://localhost/website/3.jpg");
+	background-size: cover;
+}
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+	background-color: white;
+	border:1px solid black;
+}
+table, th, td {
+	border-bottom: 1px solid black;
+}
