@@ -9,7 +9,6 @@
 	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/pageStyle.css"></link>
 </head>
 
 <body>
