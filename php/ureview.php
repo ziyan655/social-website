@@ -37,7 +37,6 @@
 	?>
 
 
-
 	<?php	
 	$insertReview1 = 0;
 	$insertReview2 = 0;
@@ -116,10 +115,9 @@
 	<div class="container">
 		<form class="form-horizontal" id="formNew" method="post" action="<?php echo htmlspecialchars("ureview.php");?>">
 			
-			
 			<div class="form-group">	
-				<label class="control-label col-sm-3"  for="Name"><font color="black">Concert Name<font color="red">*</font></font></label> 	
-				<div class="col-sm-3">		
+				<label class="control-label col-sm-3 col-xs-2 col-xs-offset-1"  for="Name"><font color="black">Concert Name<font color="red">*</font></font></label> 	
+				<div class="col-sm-3 col-xs-6">		
 					<input type="text" class="form-control" value="<?php echo $_POST['cname']; ?>" name="cname">
 					<?php if($echoCname == 1) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">'.$cnameErr.'</span>';}
 					else if($echoCname == 2) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Concert already reviewed</span>';}
@@ -131,8 +129,8 @@
 			
 			
 			<div class="form-group">
-				<label class="control-label col-sm-3" for="score"><font color="black">Select Score</font></label>
-				<div class="col-sm-3">
+				<label class="control-label col-sm-3 col-xs-2 col-xs-offset-1" for="score"><font color="black">Select Score</font></label>
+				<div class="col-sm-3 col-xs-6">
 					<select class="form-control"  name = "score">
 						<option value="1" <?php if ($_POST['score'] ==1) echo 'selected'; ?>>1</option>
 						<option value="2" <?php if ($_POST['score'] ==2) echo 'selected'; ?>>2</option>
@@ -150,16 +148,16 @@
 			
 
 			<div class="form-group" >
-				<label class="control-label col-sm-3" for="wall"><font color="black">Review<font color="red"> *</font></font></label>
-				<div class="col-sm-4">
+				<label class="control-label col-sm-3 col-xs-2 col-xs-offset-1" for="wall"><font color="black">Review<font color="red"> *</font></font></label>
+				<div class="col-sm-3 col-xs-6">
 					<textarea class="form-control" placeholder="Write review here.." name="rev" rows="4"><?php echo $_POST['rev']; ?></textarea>
 					<?php if($echoRev) {echo'<span class ="alert alert-danger" id="inputErrNew" role = "alert">'.$revErr.'</span>';}?>
 				</div>
 			</div>		
 			
 
-			<div class="form-group" id="inputForm">
-				<div class="col-sm-offset-3 col-sm-5">
+			<div class="form-group">
+				<div class="col-sm-8 col-sm-offset-4 col-xs-9 col-xs-offset-3">
 					<button type="submit" class="btn btn-success margin" name="submit" id="submitButton" >Add</button>
 				</div>
 			</div>

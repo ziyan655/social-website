@@ -37,53 +37,72 @@ html{
 }
 
 #description {
-	margin-top: 110px;
 	font-weight: bold;
 	font-size: 1.3em;
 	text-align: center;
-	padding-right: 120px;
+	color: black;
 }
 
-.form-group {
-	margin-top: 20px;
-
+.form-horizontal {
+	margin-top: 80px;
 }
 
-.alert-success {
-	width: 250px;
-	height: 35px;
-	margin-left: 405px;
-	text-align: center;
-	margin-top: 40px;
-	padding-top: 7px;
-}
 
-.alert-danger {
-	width: 400px;
-	height: 110px;
-	margin-left: 340px;
-	text-align: center;
-	margin-top: 40px;
-	padding-top: 7px;
-}
 
 #submitButton {
 	margin-top: 20px;
 	height: 29px;
 	padding-top: 4px;
-	width: 225px;
+	width: 262px;
 
 }
 .form-control {
 	height: 30px;
 }
 
-.fixed-widthBar { 
-	width:1150px; 
+@media (max-width: 1200px) {
+	.alert-success {
+		width: 200px;
+		height: 30px;
+		padding-top: 5px;
+		text-align: center;
+		margin-left: 100px;
+		margin-top: 20px;
+	}
+	#submitButton {
+		margin-top: 20px;
+		height: 29px;
+		padding-top: 4px;
+		width: 157px;
+	}
+	.alert-danger {
+		width: 400px;
+		height: 128px;
+		text-align: center;
+		margin-left: 8px;
+	}
 }
-.fixed-widthDes { 
-	width:1150px; 
-}
-.fixed-widthForm { 
-	width:1150px; 
+
+@media (min-width: 1210px) {
+	.alert-success {
+		width: 200px;
+		height: 30px;
+		padding-top: 5px;
+		text-align: center;
+		margin-left: 425px;
+		margin-top: 20px;
+	}
+	#submitButton {
+		margin-top: 20px;
+		height: 29px;
+		padding-top: 4px;
+		width: 262px;
+	}
+	.alert-danger {
+		width: 400px;
+		height: 128px;
+		text-align: center;
+		margin-left: 330px;
+		margin-top: 10px;
+	}
 }

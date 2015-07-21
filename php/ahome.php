@@ -78,18 +78,15 @@
 	$stmt->execute();
 	$stmt->bind_result($attname);
 	$stmt->fetch();
-	echo '<div class="container"><div class="fixed-width"><div class="follower">You now have ';
-	echo '<span class="highlight" id = "fanColor">';
-	echo $attname;
-	echo '</span> followers!</div></div></div>';
+	echo '<div class="container"><div class="row"><div class="col-xs-12 col-xs-offset-3 col-sm-offset-4"><div class="follower">You now have <font color=red><b>' .$attname. '</b></font></span> followers!</div></div></div></div>';
 	$stmt->close();
 
 	if ($stmt = $mysqli->prepare("select concertName from Concert where eventDate > current_timestamp")) {
  // $stmt->bind_param("s", $_GET["user_id"]);
 		$stmt->execute();
 		$stmt->bind_result($cname);
-		echo '<div class="container"><div class="fixed-width"><div class="announceText">Upcoming Concerts ';
-		echo '<ul class="highlight">';
+		echo '<div class="container"><div class="row"><div class="col-xs-12 col-xs-offset-3 col-sm-offset-4"><div class="announceText">Upcoming Concerts ';
+		echo '<ul>';
 		while($stmt->fetch()) {
 			$cname = htmlspecialchars($cname);
 			echo '<li>';
@@ -97,7 +94,7 @@
 			echo '</li>'; 
 		}
 		echo '</ul>';
-		echo '</div></div></div>';
+		echo '</div></div></div></div>';
 		$stmt->close();
 	}
 	$username =  $_SESSION["username"];
@@ -105,8 +102,8 @@
 		$stmt->bind_param("i", $_SESSION["artistid"]);
 		$stmt->execute();
 		$stmt->bind_result($cname);
-		echo '<div class="container"><div class="fixed-width"><div class="announceText">Concerts of your performance ';
-		echo '<ul class="highlight">';
+		echo '<div class="container"><div class="row"><div class="col-xs-12 col-xs-offset-3 col-sm-offset-4"><div class="announceText">Concerts of your performance ';
+		echo '<ul>';
 		while($stmt->fetch()) {
 			$cname = htmlspecialchars($cname);
 			echo '<li>';
@@ -114,7 +111,7 @@
 			echo '</li>';       
 		}
 		echo '</ul>';
-		echo '</div></div></div>';
+		echo '</div></div></div></div>';
 		$stmt->close();
 	}
 

@@ -169,46 +169,93 @@ $stmt->close();
 </div>
 
 <div class ="container">
-	<div class="fixed-width">
-		<p class = "prof"> Name: <?php echo $name;?></p>
-		<p class = "prof"> Country: <?php echo $country;?></p>
-		<p class = "prof"> About this artist: <?php echo $des;?></p>
-		<p class = "prof"> Website: <?php echo $website;?></p>
-		<p class = "prof"> Solo Concerts: <?php
-		echo "| ";
-		foreach ( $concertArr as $s ) {
-			echo $s." | ";
-		}
-		?></p>
-		<p class = "prof"> Band Concerts: <?php
-		echo "| ";
-		foreach ( $bconcertArr as $s ) {
-			echo $s." | ";
-		}
-		?></p>
-		<p class = "prof"> Music Category: <?php
-		echo "| ";
-		foreach ( $mcatArr as $s ) {
-			echo $s." | ";
-		}
-		?></p>
-		<p class = "prof"> Music Sub-category: <?php
-		echo "| ";
-		foreach ( $mscatArr as $s ) {
-			echo $s." | ";
-		}
-		?></p>
-		<p class = "prof"> Band belongs to: <?php echo $bandName;?></p>
-		<p class = "prof"> Band Music Category: <?php echo $bandMcatName;?></p>
-		<p class = "prof"> Band Music Sub-category: <?php
-		echo "| ";
-		foreach ( $bandmscatArr as $s ) {
-			echo $s." | ";
-		}
-		?></p>
-		<p class = "prof"> Number of fans: <?php echo $fanCount;?></p>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12">
+			<p class = "prof"> Name: <?php echo $name;?></p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12">
+			<p class = "prof"> Country: <?php echo $country;?></p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12">
+			<p class = "prof"> About this artist: <?php echo $des;?></p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12">
+			<p class = "prof"> Website: <?php echo $website;?></p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12">
+			<p class = "prof"> Solo Concerts: <?php
+			echo "| ";
+			foreach ( $concertArr as $s ) {
+				echo $s." | ";
+			}
+			?></p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12">
+			<p class = "prof"> Band Concerts: <?php
+			echo "| ";
+			foreach ( $bconcertArr as $s ) {
+				echo $s." | ";
+			}
+			?></p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12">
+			<p class = "prof"> Music Category: <?php
+			echo "| ";
+			foreach ( $mcatArr as $s ) {
+				echo $s." | ";
+			}
+			?></p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12">
+			<p class = "prof"> Music Sub-category: <?php
+			echo "| ";
+			foreach ( $mscatArr as $s ) {
+				echo $s." | ";
+			}
+			?></p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12">
+			<p class = "prof"> Band belongs to: <?php echo $bandName;?></p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12">
+			<p class = "prof"> Band Music Category: <?php echo $bandMcatName;?></p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12">
+			<p class = "prof"> Band Music Sub-category: <?php
+			echo "| ";
+			foreach ( $bandmscatArr as $s ) {
+				echo $s." | ";
+			}
+			?></p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12">
+			<p class = "prof"> Number of fans: <?php echo $fanCount;?></p>
+		</div>
 	</div>
 </div>
+
 
 
 <?php
@@ -234,10 +281,14 @@ if ( isset( $_SESSION["userid"] ) && $_SESSION["bmark"]==0 ) {
 	<div class="container">
 		<form class="form-inline" role = "form" method="POST" action="aprofile.php?artistid=<?php echo $aid?>">
 			<div class="form-group" >
-				<button type="submit" class="btn margin btn-primary <?php if ( $Followed ) {echo 'disabled';}?> submitButton" name="submitFollow" id="submitButton" ><?php if ( $Followed ) echo 'Followed'; else echo 'Follow';?></button>
+				<div class="col-xs-offset-0">
+					<button type="submit" class="btn margin btn-primary <?php if ( $Followed ) {echo 'disabled';}?> submitButton" name="submitFollow" id="submitButton" ><?php if ( $Followed ) echo 'Followed'; else echo 'Follow';?></button>
+				</div>
 			</div>
 			<div class="form-group" >
-				<button type="submit" class="btn margin btn-primary <?php if ( $Bookmarked ) {echo 'disabled';}?> submitButton" name="submitBookm" id="submitButtonNew"><?php if ( $Bookmarked ) echo 'Bookmarked'; else echo 'Bookmark';?></button>
+				<div class="col-xs-offset-0">
+					<button type="submit" class="btn margin btn-primary <?php if ( $Bookmarked ) {echo 'disabled';}?> submitButton" name="submitBookm" id="submitButtonNew"><?php if ( $Bookmarked ) echo 'Bookmarked'; else echo 'Bookmark';?></button>
+				</div>
 			</div>
 		</form>
 	</div>
@@ -268,7 +319,9 @@ else if ( $_SESSION["bmark"]==1 ) {
 	<div class="container">
 		<form class="form-inline" role = "form" method="POST" action="aprofile.php?artistid=<?php echo $aid?>">
 			<div class="form-group" >
-				<button type="submit" class="btn margin btn-primary <?php if ( $Followed ) {echo 'disabled';}?> submitButton" name="submitFollow" id="submitButton" ><?php if ( $Followed ) echo 'Followed'; else echo 'Follow';?></button>
+				<div class="col-xs-offset-0">
+					<button type="submit" class="btn margin btn-primary <?php if ( $Followed ) {echo 'disabled';}?> submitButton" name="submitFollow" id="submitButton" ><?php if ( $Followed ) echo 'Followed'; else echo 'Follow';?></button>
+				</div>
 			</div>
 		</form>
 	</div>

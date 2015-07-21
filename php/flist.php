@@ -386,8 +386,8 @@
 
 		<form class="form-horizontal" id="formNew" method="post" action="<?php echo htmlspecialchars("flist.php");?>">
 			<div class="form-group"> 
-				<label class="control-label col-sm-2"  for="Name"><font color="black">Concert Name</font></label>   
-				<div class="col-sm-4">    
+				<label class="control-label col-sm-2 col-xs-2"  for="Name"><font color="black">Concert Name</font></label>   
+				<div class="col-sm-4 col-xs-5">    
 					<input type="text" class="form-control" value="<?php echo $_POST['cnameInsert']; ?>" name="cnameInsert">
 					<?php if($echoCnameIns == 2) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Concert <b>'.$_SESSION['notFound'].' </b>not found in database</span>';}
 					else if($echoCnameIns == 3) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Concert <b>'.$_SESSION['notFound'].' </b>already in the list</span>';}
@@ -397,33 +397,32 @@
 				</div> 
 			</div>
 			<div class="form-group"> 
-				<label class="control-label col-sm-2"  for="Name"><font color="black">List Name</font></label>   
-				<div class="col-sm-4">    
+				<label class="control-label col-sm-2 col-xs-2"  for="Name"><font color="black">List Name</font></label>   
+				<div class="col-sm-4 col-xs-5">    
 					<input type="text" class="form-control" value="<?php echo $_POST['lnameExisting']; ?>" name="lnameExisting">
 					<?php if($echoLnameIns == 2) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">List not found</span>';}   
 					?>
 				</div> 
 			</div>
 			<div class="form-group" >
-				<button type="submit" class="btn margin btn-primary" name="submitAdd" id="submitAdd" >Add</button>
+				<div class="col-sm-8 col-sm-offset-4 col-xs-9 col-xs-offset-3"> 
+					<button type="submit" class="btn margin btn-primary" name="submitAdd" id="submitButton" >Add</button>
+				</div>
 			</div>
 		</form>
 
-
-
-
 		<form class="form-horizontal" id="formNew" method="post" action="<?php echo htmlspecialchars("flist.php");?>">
 			<div class="form-group"> 
-				<label class="control-label col-sm-2"  for="Name"><font color="black">New List Name</font></label>   
-				<div class="col-sm-4">    
+				<label class="control-label col-sm-2 col-xs-2"  for="Name"><font color="black">New List Name</font></label>   
+				<div class="col-sm-4 col-xs-5">    
 					<input type="text" class="form-control" value="<?php echo $_POST['lnameNew']; ?>" name="lnameNew">
 					<?php if($echoLnameNew == 2) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">List already exists</span>';}
 					?>
 				</div> 
 			</div>
 			<div class="form-group"> 
-				<label class="control-label col-sm-2"  for="Name"><font color="black">Initial Concert Name</font></label>   
-				<div class="col-sm-4">    
+				<label class="control-label col-sm-2 col-xs-2"  for="Name"><font color="black">Initial Concert Name</font></label>   
+				<div class="col-sm-4 col-xs-5">    
 					<input type="text" class="form-control" value="<?php echo $_POST['cnameNew']; ?>" name="cnameNew">
 					<?php if($echoCnameNew == 2) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Concert <b>'.$_SESSION['notFound'].' </b>not found in database</span>';}
 					else if($echoCnameNew == 3) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">'.$cnameNewErr.'</span>';}
@@ -432,15 +431,17 @@
 				</div> 
 			</div>
 			<div class="form-group" >
-				<button type="submit" class="btn margin btn-primary" name="submitIns" id="submitNewList" >Create</button>
+				<div class="col-sm-8 col-sm-offset-4 col-xs-9 col-xs-offset-3"> 
+					<button type="submit" class="btn margin btn-primary" name="submitIns" id="submitButton" >Create</button>
+				</div>
 			</div>
 		</form>
 
 
 		<form class="form-horizontal" id="formNew" method="post" action="<?php echo htmlspecialchars("flist.php");?>">
 			<div class="form-group"> 
-				<label class="control-label col-sm-2"  for="Name"><font color="black">Concert Deletion Name</font></label>   
-				<div class="col-sm-4">    
+				<label class="control-label col-sm-2 col-xs-2"  for="Name"><font color="black">Concert Deletion Name</font></label>   
+				<div class="col-sm-4 col-xs-5">    
 					<input type="text" class="form-control" value="<?php echo $_POST['cnameDel']; ?>" name="cnameDel">
 					<?php if($echoCnameDel == 2 && $echoLnameDel != 2) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Concert <b>'.$_SESSION['notFound'].' </b>not found in database</span>';}
 					else if($echoCnameDel == 3 && $echoLnameDel != 2) { echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Concert <b>'.$_SESSION['notFound'].' </b>not found in list</span>';} 
@@ -450,15 +451,17 @@
 				</div> 
 			</div>
 			<div class="form-group"> 
-				<label class="control-label col-sm-2"  for="Name"><font color="black">List Name</font></label>   
-				<div class="col-sm-4">    
+				<label class="control-label col-sm-2 col-xs-2"  for="Name"><font color="black">List Name</font></label>   
+				<div class="col-sm-4 col-xs-5">    
 					<input type="text" class="form-control" value="<?php echo $_POST['lnameDel']; ?>" name="lnameDel">
 					<?php if($echoLnameDel == 2) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">List not found</span>';}   
 					?>
 				</div> 
 			</div>
 			<div class="form-group" >
-				<button type="submit" class="btn margin btn-primary" name="submitDel" id="submitDel" >Delete</button>
+				<div class="col-sm-8 col-sm-offset-4 col-xs-9 col-xs-offset-3"> 
+					<button type="submit" class="btn margin btn-primary" name="submitDel" id="submitButton" >Delete</button>
+				</div>
 			</div>
 		</form>
 
@@ -466,8 +469,8 @@
 
 		<form class="form-horizontal" id="formNewB" method="post" action="<?php echo htmlspecialchars("flist.php");?>">
 			<div class="form-group"> 
-				<label class="control-label col-sm-2"  for="Name"><font color="black">List Deletion Name</font></label>   
-				<div class="col-sm-4">    
+				<label class="control-label col-sm-2 col-xs-2"  for="Name"><font color="black">List Deletion Name</font></label>   
+				<div class="col-sm-4 col-xs-5">    
 					<input type="text" class="form-control" value="<?php echo $_POST['lnameRemove']; ?>" name="lnameRemove">
 					<?php if($echoLnameRev == 2) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">List not found</span>';}
 					else if($echoSucRev) { echo'<span class ="alert alert-success" id="inputErr" role = "alert">List removed</span>';} 
@@ -475,16 +478,20 @@
 				</div> 
 			</div>
 			<div class="form-group" >
-				<button type="submit" class="btn margin btn-primary" name="submitRev" id="submitRemove" >Remove</button>
+				<div class="col-sm-8 col-sm-offset-4 col-xs-9 col-xs-offset-3"> 
+					<button type="submit" class="btn margin btn-primary" name="submitRev" id="submitButton" >Remove</button>
+				</div>
 			</div>
 		</form>
 
 
 		<form role = "form-horizontal" id="formNew" method="POST" action="<?php echo htmlspecialchars("flist.php");?>">
 			<div class="form-group" >
-				<button type="submit" class="btn margin btn-primary" id="submitButton" name="clear">Clear All Lists
-					<?php if($echoSucClr == 1) {echo'<span class ="alert alert-success" id="sucess" role = "alert">Lists cleared</span>';}
-					?></button>
+				<div class="col-sm-5 col-sm-offset-7 col-xs-6 col-xs-offset-6"> 
+					<button type="submit" class="btn margin btn-primary" id="clearButton" name="clear">Clear All Lists
+						<?php if($echoSucClr == 1) {echo'<span class ="alert alert-success" id="sucess" role = "alert">Lists cleared</span>';}
+						?></button>
+					</div>
 				</div>
 			</form>
 		</div> 

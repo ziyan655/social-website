@@ -20,9 +20,7 @@
 	$_SESSION["bmark"] = 0;
 	$_SESSION['urlSet'] = "";
 	?>
-	<?php
 
-	?>
 
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
@@ -74,10 +72,7 @@
 	$stmt->execute();
 	$stmt->bind_result($followerCount);
 	$stmt->fetch();
-	echo '<div class="container"><div class="fixed-widthFollower"><div class="follower">You now have ';
-	echo '<span class="highlight" id = "followerColor">';
-	echo $followerCount;
-	echo '</span> followers!</div></div></div>';
+	echo '<div class="container"><div class="row"><div class="col-xs-11 col-xs-offset-0"><div class="follower">You now have <font color=red><b>' . $followerCount . '</b></font> followers!</div></div></div></div>';
 	$_SESSION['fanCount'] = $followerCount;
 	$stmt->close();
 
@@ -85,8 +80,8 @@
 	if ($stmt = $mysqli->prepare("select concertName from Concert where eventDate > current_timestamp")) {
 		$stmt->execute();
 		$stmt->bind_result($cname);
-		echo '<div class="container"><div class="fixed-widthContent"><div class="announceText">Upcoming Concerts ';
-		echo '<ul class="highlight">';
+		echo '<div class="container"><div class="row"><div class="col-xs-9 col-xs-offset-3 col-sm-offset-4"><div class="announceText">Upcoming Concerts ';
+		echo '<ul>';
 		while($stmt->fetch()) {
 			$cname = htmlspecialchars($cname);
 			echo '<li>';
@@ -94,12 +89,12 @@
 			echo '</li>';
 		}
 		echo '</ul>';
-		echo '</div></div></div>';
+		echo '</div></div></div></div>';
 		$stmt->close();
 	}
 
-	echo '<div class="container"><div class="fixed-widthContent"><div class ="announceText">Concerts by the artists you liked ';
-	echo '<ul class = "highlight">';
+	echo '<div class="container"><div class="row"><div class="col-xs-9 col-xs-offset-3 col-sm-offset-4"><div class ="announceText">Concerts by the artists you liked ';
+	echo '<ul>';
 	if ($stmt = $mysqli->prepare("SELECT cr.concertName FROM Concert cr, User u, User_Artist ua, Artist_Concert ac, Artist a, Location l, City c, Country cou WHERE c.cityId=l.cityId AND c.countryId=cou.countryId AND l.locationId=cr.locationId AND u.userId=ua.userId AND ua.artistId= ac.artistId AND ac.concertId=cr.concertId AND ua.artistId=a.artistId AND eventDate > current_timestamp AND u.userName= ?")) {
 		$stmt->bind_param("s", $username);
 		$stmt->execute();
@@ -115,8 +110,8 @@
 		$stmt->close();
 	}
 
-	echo '<div class="container"><div class="fixed-widthContent"><div class="announceText">Recommendations for you ';
-	echo '<ul class = "highlight">';
+	echo '<div class="container"><div class="row"><div class="col-xs-9 col-xs-offset-3 col-sm-offset-4"><div class="announceText">Recommendations for you ';
+	echo '<ul>';
 	$res=$mysqli->query("CALL recommended_Concert('$username')");
 	while($row = $res -> fetch_assoc()){
 		echo '<li>';
@@ -124,7 +119,7 @@
 		echo '</li>';
 	}
 	echo '</ul>';
-	echo '</div></div></div>';
+	echo '</div></div></div></div>';
 	$mysqli->close();
 	?>
 

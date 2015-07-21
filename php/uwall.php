@@ -78,14 +78,14 @@
 	<div class="container">
 		<form class="form-horizontal" id="formNew" method="post" action="<?php echo htmlspecialchars("uwall.php");?>">
 			<div class="form-group" >
-				<div class="col-sm-6">
+				<div class="col-sm-4 col-sm-offset-3 col-xs-8 col-xs-offset-1">
 					<textarea class="form-control" placeholder="Say something.." name="wall" rows="2"><?php echo $_POST['wall']; ?></textarea>
 					<?php if($echoSuc) { echo'<span class ="alert alert-success" role = "alert">Successfully posted!  Trust Score +1!</span>';} ?>
 				</div>
 			</div>
 
 			<div class="form-group" id="inputForm">
-				<div class="col-sm-6">
+				<div class="col-sm-9 col-sm-offset-3 col-xs-10 col-xs-offset-1">
 					<button type="submit" class="btn btn-success margin" name="submit" id="submitButton" >Post</button>
 				</div>
 			</div>

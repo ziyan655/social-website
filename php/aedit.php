@@ -170,7 +170,7 @@
 		$stmt->bind_param("si", $_POST["web"],$artid);
 		$stmt->execute();
 		$stmt->close();
-		echo '<div class = "alert alert-success" role = "alert" id="websuc">Official website successfully updated!</div>';
+		$echoWeb = 2;
 	}
 
 	if(!empty($_POST["band"])) {
@@ -213,16 +213,16 @@
 		<form class="form-horizontal" id="formNew" method="post" action="<?php echo htmlspecialchars("aedit.php");?>">
 			
 			<div class="form-group" >
-				<label class="control-label col-sm-3" for="email"><font color="black">Change Email</font></label>
-				<div class="col-sm-3">
+				<label class="control-label col-sm-3 col-sm-offset-1 col-xs-3" for="email"><font color="black">Change Email</font></label>
+				<div class="col-sm-3 col-xs-4">
 					<input type="email" class="form-control" value="<?php echo $_POST['email']; ?>"name="email" >
 					<?php if($emailSuc) {echo'<span class ="alert alert-success" id="inputErr" role = "alert">Email updated</span>';}	?>
 				</div>
 			</div>
 			
 			<div class="form-group" >
-				<label class="control-label col-sm-3" for="uName"><font color="black">Update Musical Category</font></label> 	
-				<div class="col-sm-3">		
+				<label class="control-label col-sm-3 col-sm-offset-1 col-xs-3" for="uName"><font color="black">Update Musical Category</font></label> 	
+				<div class="col-sm-3 col-xs-4">		
 					<input type="text" class="form-control"  value="<?php echo $_POST['mcat']; ?>" name="mcat" >
 					<?php if($echoMcat == 1) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Music category not found</span>';} 
 					else if($echoMcat == 2) {echo'<span class ="alert alert-success" id="inputErr" role = "alert">Music category updated</span>';}
@@ -231,8 +231,8 @@
 			</div>
 			
 			<div class="form-group" >
-				<label class="control-label col-sm-3" for="pass"><font color="black">Add Musical Sub-category</font></label> 	
-				<div class="col-sm-3">		
+				<label class="control-label col-sm-3 col-sm-offset-1 col-xs-3" for="pass"><font color="black">Add Musical Sub-category</font></label> 	
+				<div class="col-sm-3 col-xs-4">		
 					<input type="text" class="form-control" value="<?php echo $_POST['mscat']; ?>" name="mscat"  >
 					<?php if($echoMscat == 1) echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Music sub-category not found</span>';
 					else if($echoMscat == 2) {echo'<span class ="alert alert-success" id="inputErr" role = "alert">Music sub-category updated</span>';}	?>
@@ -240,8 +240,8 @@
 			</div>
 			
 			<div class="form-group" >
-				<label class="control-label col-sm-3" for="pass"><font color="black">Remove Musical Sub-category</font></label> 	
-				<div class="col-sm-3">		
+				<label class="control-label col-sm-3 col-sm-offset-1 col-xs-3" for="pass"><font color="black">Remove Musical Sub-category</font></label> 	
+				<div class="col-sm-3 col-xs-4">		
 					<input type="text" class="form-control" value="<?php echo $_POST['rmscat']; ?>" name="rmscat"  >
 					<?php if($echoRmscat == 1) echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Music sub-category not found</span>';
 					else if($echoRmscat == 2) {echo'<span class ="alert alert-success" id="inputErr" role = "alert">Music sub-category removed</span>';}	?>
@@ -249,8 +249,8 @@
 			</div>	
 			
 			<div class="form-group" >
-				<label class="control-label col-sm-3" for="pass"><font color="black">Update Official Website</font></label> 	
-				<div class="col-sm-3">		
+				<label class="control-label col-sm-3 col-sm-offset-1 col-xs-3" for="pass"><font color="black">Update Official Website</font></label> 	
+				<div class="col-sm-3 col-xs-4">		
 					<input type="text" class="form-control" value="<?php echo $_POST['web']; ?>" name="web"  >
 					<?php if($echoWeb == 1) echo'<span class ="alert alert-danger" id="inputErr" role = "alert">'.$websiteErr.'</span>';
 					else if($echoWeb == 2) echo'<span class ="alert alert-success" id="inputErr" role = "alert">Official website updated</span>';
@@ -260,8 +260,8 @@
 			
 			
 			<div class="form-group" >
-				<label class="control-label col-sm-3" for="pass"><font color="black">Member of which Band Change</font></label> 	
-				<div class="col-sm-3">		
+				<label class="control-label col-sm-3 col-sm-offset-1 col-xs-3" for="pass"><font color="black">Member of which Band Change</font></label> 	
+				<div class="col-sm-3 col-xs-4">		
 					<input type="text" class="form-control" value="<?php echo $_POST['band']; ?>" name="band"  >
 					<?php if($echoBand == 1) echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Band not found</span>';
 					else if($echoBand == 2) {echo'<span class ="alert alert-success" id="inputErr" role = "alert">Band updated</span>';}	?>
@@ -269,8 +269,8 @@
 			</div>	
 			
 			<div class="form-group" >
-				<label class="control-label col-sm-3" for="pass"><font color="black">Update Home Page Bio</font></label> 	
-				<div class="col-sm-4">		
+				<label class="control-label col-sm-3 col-sm-offset-1 col-xs-3" for="pass"><font color="black">Update Home Page Bio</font></label> 	
+				<div class="col-sm-4 col-xs-4">		
 					<textarea class="form-control" placeholder="Write here.." name="bio" rows="2"><?php echo $_POST['bio']; ?></textarea>
 					<?php if($echoBio) echo'<span class ="alert alert-success" id="inputSuc" role = "alert">Bio updated</span>';	?>
 				</div>
@@ -278,7 +278,7 @@
 			
 			
 			<div class="form-group" >
-				<div class="col-sm-offset-3 col-sm-6">
+				<div class="col-sm-offset-4 col-sm-7 col-xs-offset-3">
 					<button type="submit" class="btn btn-success margin" name="submit" id="submitButton" >Update</button>
 				</div>
 			</div>

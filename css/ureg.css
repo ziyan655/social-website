@@ -34,44 +34,29 @@ html{
 }
 #formNew{
  margin-top:80px;
- margin-left:120px;
+
  font-size: 0.9em;
 }
-.alert-danger {
- height:27px;
- text-align: center;
- width:320px;
- padding-top:3px;
-}
-.alert-info {
- position:absolute;
- top:1px;
- left:370px;
- height:27px;
- text-align: center;
- width:320px;
- padding-top:3px;
-}
+
 .alert-success {
  position:absolute;
- top:1px;
- left:370px;
+ bottom:35px;
+ left:15px;
  height:27px;
  text-align: center;
- width:320px;
+ width:260px;
  padding-top:3px;
 }
-#inputErr{
- position:absolute;
- top: 4px;
- left:290px;
-}
+
 #submitButton{
- margin-top:11px;
- width:410px;
- height: 29px;
- padding-top: 4px;
+ width:263px;
 }
 .form-control {
  height: 30px;
+}
+
+@media (max-width:1200px){
+  #submitButton{
+    width:157px;
+  }
 }

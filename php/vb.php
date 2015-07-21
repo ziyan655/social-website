@@ -50,7 +50,7 @@
 					$stmt->execute();
 					$stmt->bind_result($bandname,$bandid);
 					while($stmt->fetch()){
-						echo '<tr>'.'<td>'.'<a href="http:/website/php/bprof.php?bandid='.$bandid.'">'.$bandname.'</a>'.'</td>'.'</tr>';
+						echo '<tr>'.'<td>'.'<a href="bprof.php?bandid='.$bandid.'">'.$bandname.'</a>'.'</td>'.'</tr>';
 					}
 					$stmt->close();
 					?>
@@ -73,7 +73,7 @@
 					$stmt->execute();
 					$stmt->bind_result($bandname,$bandid);
 					while($stmt->fetch()){
-						echo '<tr>'.'<td>'.'<a href="http:/website/php/bprof.php?bandid='.$bandid.'">'.$bandname.'</a>'.'</td>'.'</tr>';
+						echo '<tr>'.'<td>'.'<a href="bprof.php?bandid='.$bandid.'">'.$bandname.'</a>'.'</td>'.'</tr>';
 					}
 					$stmt->close();
 					$mysqli->close();

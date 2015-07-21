@@ -33,8 +33,7 @@ html{
  color: #99CCFF;
 }
 #formNew{
- margin-top:40px;
- margin-left:120px;
+ margin-top:80px;
  font-size: 0.9em;
 }
 .alert-danger {
@@ -54,11 +53,11 @@ html{
 }
 .alert-success {
  position:absolute;
- top:1px;
- left:370px;
+ bottom:35px;
+ left:15px;
  height:27px;
  text-align: center;
- width:320px;
+ width:260px;
  padding-top:3px;
 }
 #inputErr{
@@ -66,12 +65,19 @@ html{
  top: 4px;
  left:290px;
 }
-#submitButton{
- margin-top:11px;
- width:410px;
- height: 29px;
- padding-top: 4px;
-}
+
 .form-control {
  height: 30px;
+}
+
+@media (max-width: 1200px) {
+  #submitButton{
+    width:158px;
+  }
+}
+
+@media (min-width: 1210px) {
+  #submitButton{
+   width:263px;
+ }
 }

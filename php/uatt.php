@@ -103,8 +103,8 @@
 		<form class="form-horizontal" id="formNew" method="post" action="<?php echo htmlspecialchars("uatt.php");?>">
 
 			<div class="form-group">	
-				<label class="control-label col-sm-3"  for="Name"><font color="black">Concert Name<font color="red">*</font></font></label> 	
-				<div class="col-sm-4">		
+				<label class="control-label col-sm-3 col-xs-offset-0 col-xs-3"  for="Name"><font color="black">Concert Name<font color="red">*</font></font></label> 	
+				<div class="col-sm-3 col-xs-7">		
 					<input type="text" class="form-control" value="<?php echo $_POST['cname']; ?>" name="cname">
 					<?php if($echoCname == 1) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Concert already attended</span>';}
 					else if($echoCname == 2) { echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Concert not found</span>';} 
@@ -114,7 +114,7 @@
 			</div>
 
 			<div class="form-group" id="inputForm">
-				<div class="col-sm-offset-3 col-sm-5">
+				<div class="col-sm-offset-4 col-sm-5 col-xs-offset-3">
 					<button type="submit" class="btn btn-success margin" name="submit" id="submitButton" >Add</button>
 				</div>
 			</div>

@@ -51,13 +51,13 @@
 	<div class="container">
 		<form class="form-horizontal" id="formNew" method="post" action="<?php echo htmlspecialchars("awall.php");?>">
 			<div class="form-group" >
-				<div class="col-sm-6" >
+				<div class="col-sm-offset-3 col-xs-5 col-xs-offset-1" >
 					<textarea class="form-control" placeholder="Say something.." name="rev" rows="4" ><?php echo $_POST['rev']; ?></textarea>
 				</div>
 			</div>
 
 			<div class="form-group">
-				<div class=" col-sm-6">
+				<div class=" col-sm-offset-3 col-xs-offset-1">
 					<button type="submit" class="btn btn-success margin" name="submit" id="submitButton" >Post</button>
 				</div>
 			</div>

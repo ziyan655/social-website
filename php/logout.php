@@ -19,16 +19,33 @@
 		height:100%;
 		min-height:100%;
 	}
-	.alert-info {
-		height:35px;
-		text-align: center;
-		width:300px;
-		padding-top:6px;
-		position:absolute;
-		top: 270px;
-		left:730px;
-		font-size:1.1em;
-		padding-left:6px;
+
+	@media (max-width: 1200px) {
+		.alert-info {
+			height:35px;
+			text-align: center;
+			width:230px;
+			padding-top:6px;
+			position:absolute;
+			top: 270px;
+			left: 50px;
+			font-size:1.1em;
+			padding-left:6px;
+		}
+	}
+
+	@media (min-width: 1210px) {
+		.alert-info {
+			height:35px;
+			text-align: center;
+			width:300px;
+			padding-top:6px;
+			position:absolute;
+			top: 270px;
+			left:730px;
+			font-size:1.1em;
+			padding-left:6px;
+		}
 	}
 	</style>
 </head>
@@ -36,8 +53,14 @@
 	<?php
 	session_start();
 	session_destroy();
-	header("refresh: 2; ../index.php");
-	echo '<div class = "alert alert-info" role = "alert">Logging out..</div>';
+	echo '<script>
+	function redirect()
+	{
+		window.location="../index.php";
+	}
+	setTimeout(redirect, 600);
+	</script>';
+	echo '<div class="container"><div class="alert alert-info" role="alert">Logging out...</div></div>';
 	?>
 </body>
 </html>

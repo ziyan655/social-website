@@ -9,10 +9,6 @@ html{
 	min-height:100%;
 }
 
-.container{
-	width:1260px;
-	margin:auto;
-}
 .navbar-fixed-top  { 
 	min-height:30px; 
 }
@@ -44,7 +40,7 @@ html{
 	font-size:1em;
 	color:#000000;
 	font-family: monospace;
-	margin-left:430px;
+	
 }
 .follower {
 	text-align:center;
@@ -54,20 +50,7 @@ html{
 	color:black;
 	font-family: monospace;
 }
-.highlight {
-	color:#000000;
-	text-decoration:bold;	
-}
-#followerColor {
-	color:red;
-}
 
-.fixed-widthContent { 
-	width:1150px; 
-}
-.fixed-widthFollower { 
-	width:1150px; 
-}
 .navbar-collapse {
 	max-height: none !important;
 }
@@ -106,4 +89,10 @@ html{
 	.collapse.in{
 		display:block !important;
 	}
+}
+
+@media (min-width: 1210px) {
+    .container{
+        width: 1260px;
+    }
 }

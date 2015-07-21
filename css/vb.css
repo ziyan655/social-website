@@ -15,7 +15,6 @@ A:visited {color:black}
 }
 .navbar  .navbar-nav > li > a { 
 	padding-top: 3px; padding-bottom: 0px; line-height: 37px; height: 38px;
-
 }
 .navbar-toggle .icon-bar {
 	width: 22px;
@@ -47,9 +46,7 @@ A:visited {color:black}
 	float:left;
 	width:40%;
 }
-.container table{
-	margin-left: 110px;
-}
+
 body{
 	background-image: url("../img/bg.jpg");
 	background-size: repeat;

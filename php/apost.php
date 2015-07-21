@@ -302,20 +302,21 @@ $mysqli->close();
 	<form class="form-horizontal" id="formNew" method="post" action="<?php echo htmlspecialchars("apost.php");?>">
 
 		<div class="form-group">	
-			<label class="control-label col-sm-3"  for="Name"><font color="black">Concert Name<font color="red">*</font></font></label> 	
-			<div class="col-sm-3">		
+			<label class="control-label col-sm-3 col-xs-3"  for="Name"><font color="black">Concert Name<font color="red">*</font></font></label> 	
+			<div class="col-sm-3 col-xs-4">		
 				<input type="text" class="form-control" value="<?php echo $_POST['cname']; ?>" name="cname">
 				<?php if($echoCname == 1) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">'.$cnameErr.'</span>';}
 				else if($echoCname == 2) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Concert already exists</span>';}
 				else if($echoSucc) { echo'<span class ="alert alert-success" role = "alert">Successfully posted!</span>';} 
+				//echo'<span class ="alert alert-success" role = "alert">Successfully posted!</span>';
 				?>
 			</div> 
 		</div>
 
 
 		<div class="form-group" >
-			<label class="control-label col-sm-3" for="email"><font color="black">Event Date<font color="red">*</font></font></label>
-			<div class="col-sm-3">
+			<label class="control-label col-sm-3 col-xs-3" for="email"><font color="black">Event Date<font color="red">*</font></font></label>
+			<div class="col-sm-3 col-xs-4">
 				<input type="date" class="form-control" value="<?php echo $_POST['date']; ?>"name="date" >
 				<?php if($echoDate == 1) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">'.$dateErr.'</span>';}
 				else if($echoDate == 2) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Date must be in the future</span>';}
@@ -325,16 +326,16 @@ $mysqli->close();
 		</div>
 
 		<div class="form-group" >
-			<label class="control-label col-sm-3" for="uName"><font color="black">Event Time<font color="red">*</font></font></label> 	
-			<div class="col-sm-3">		
+			<label class="control-label col-sm-3 col-xs-3" for="uName"><font color="black">Event Time<font color="red">*</font></font></label> 	
+			<div class="col-sm-3 col-xs-4">		
 				<input type="time" class="form-control"  value="<?php echo $_POST['time']; ?>" name="time" >
 				<?php if($echoTime == 1) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">'.$timeErr.'</span>';}?>
 			</div>
 		</div>
 
 		<div class="form-group" >
-			<label class="control-label col-sm-3" for="pass"><font color="black">Location Name<font color="red">*</font></font></label> 	
-			<div class="col-sm-3">		
+			<label class="control-label col-sm-3 col-xs-3" for="pass"><font color="black">Location Name<font color="red">*</font></font></label> 	
+			<div class="col-sm-3 col-xs-4">		
 				<input type="text" class="form-control" value="<?php echo $_POST['loc']; ?>" name="loc"  >
 				<?php if($echoLoc == 1) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">'.$locErr.'</span>';}
 				else if($echoLoc == 2) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Location not found</span>';}
@@ -343,8 +344,8 @@ $mysqli->close();
 		</div>
 
 		<div class="form-group" >
-			<label class="control-label col-sm-3" for="pass"><font color="black">City Name<font color="red">*</font></font></label> 	
-			<div class="col-sm-3">		
+			<label class="control-label col-sm-3 col-xs-3" for="pass"><font color="black">City Name<font color="red">*</font></font></label> 	
+			<div class="col-sm-3 col-xs-4">		
 				<input type="text" class="form-control" value="<?php echo $_POST['city']; ?>" name="city"  >
 				<?php if($echoCity == 1) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">'.$cityErr.'</span>';}
 				else if($echoCity == 2) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">City not found</span>';}
@@ -353,8 +354,8 @@ $mysqli->close();
 		</div>
 
 		<div class="form-group" >
-			<label class="control-label col-sm-3" for="pass"><font color="black">Country Name<font color="red">*</font></font></label> 	
-			<div class="col-sm-3">		
+			<label class="control-label col-sm-3 col-xs-3" for="pass"><font color="black">Country Name<font color="red">*</font></font></label> 	
+			<div class="col-sm-3 col-xs-4">		
 				<input type="text" class="form-control" value="<?php echo $_POST['country']; ?>" name="country"  >
 				<?php if($echoCountry == 1) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">'.$countryErr.'</span>';}
 				else if($echoCountry == 2) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Country not found</span>';}
@@ -363,38 +364,38 @@ $mysqli->close();
 		</div>
 
 		<div class="form-group" >
-			<label class="control-label col-sm-3" for="uName"><font color="black">Description</font></label> 	
-			<div class="col-sm-3">		
+			<label class="control-label col-sm-3 col-xs-3" for="uName"><font color="black">Description</font></label> 	
+			<div class="col-sm-3 col-xs-4">		
 				<input type="text" class="form-control"  value="<?php echo $_POST['des']; ?>" name="des" >
 			</div>
 		</div>
 
 
 		<div class="form-group" >
-			<label class="control-label col-sm-3" for="uName"><font color="black">Ticket Price</font></label> 	
-			<div class="col-sm-3">		
+			<label class="control-label col-sm-3 col-xs-3" for="uName"><font color="black">Ticket Price</font></label> 	
+			<div class="col-sm-3 col-xs-4">		
 				<input type="number" class="form-control"  value="<?php echo $_POST['price']; ?>" name="price" >
 			</div>
 		</div>
 
 
 		<div class="form-group" >
-			<label class="control-label col-sm-3" for="uName"><font color="black">Available Seats</font></label> 	
-			<div class="col-sm-3">		
+			<label class="control-label col-sm-3 col-xs-3" for="uName"><font color="black">Available Seats</font></label> 	
+			<div class="col-sm-3 col-xs-4">		
 				<input type="number" class="form-control"  value="<?php echo $_POST['seats']; ?>" name="seats" >
 			</div>
 		</div>
 
 		<div class="form-group" >
-			<label class="control-label col-sm-3" for="uName"><font color="black">Booking Link</font></label> 	
-			<div class="col-sm-3">		
+			<label class="control-label col-sm-3 col-xs-3" for="uName"><font color="black">Booking Link</font></label> 	
+			<div class="col-sm-3 col-xs-4">		
 				<input type="url" class="form-control"  value="<?php echo $_POST['link']; ?>" name="link" >
 			</div>
 		</div>
 
 		<div class="form-group" >
-			<label class="control-label col-sm-3" for="pass"><font color="black">Band Name<font color="red">*</font></font></label> 	
-			<div class="col-sm-3">		
+			<label class="control-label col-sm-3 col-xs-3" for="pass"><font color="black">Band Name<font color="red">*</font></font></label> 	
+			<div class="col-sm-3 col-xs-4">		
 				<input type="text" class="form-control" value="<?php echo $_POST['band']; ?>" name="band"  >
 				<?php if($echoBand == 1) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">You do not belong to this band</span>';}
 				else if($echoBand == 2) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Band not found</span>';}
@@ -402,8 +403,8 @@ $mysqli->close();
 			</div>
 		</div>
 
-		<div class="form-group" id="inputForm">
-			<div class="col-sm-offset-3 col-sm-6">
+		<div class="form-group">
+			<div class="col-sm-offset-3 col-sm-8 col-xs-offset-3">
 				<button type="submit" class="btn btn-success margin" name="submit" id="submitButton" >Post</button>
 			</div>
 		</div>

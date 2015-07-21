@@ -34,8 +34,6 @@ html{
 }
 #formNew{
    margin-top:110px;
-   margin-left:100px;
-
 }
 .alert-danger {
    height:27px;
@@ -43,20 +41,10 @@ html{
    width:320px;
    padding-top:3px;
 }
-.alert-info {
-   margin-left:260px;
-   height:28px;
-   text-align: center;
-   width:320px;
-   padding-top:3px;
-   position:absolute;
-   top: 100px;
-   left:820px;
-}
 .alert-success {
    position:absolute;
    top:150px;
-   left:8px;
+   left:2px;
    height:27px;
    text-align: center;
    width:350px;
@@ -65,19 +53,28 @@ html{
 #inputErr{
    position:absolute;
    top: 4px;
-   left:360px;
+   left:300px;
 }
 #inputErrNew{
    position:absolute;
    top: 32px;
-   left:350px;
+   left:300px;
 }
 #submitButton{
    margin-top:11px;
-   width:329px;
+   width: 262px;
    height: 29px;
    padding-top: 4px;
 }
 .form-control {
- height: 28px;
+  height: 28px;
+}
+
+@media (max-width: 1200px) {
+  #submitButton{
+    margin-top:11px;
+    width: 188px;
+    height: 29px;
+    padding-top: 4px;
+ }
 }

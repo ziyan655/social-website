@@ -34,12 +34,12 @@ html{
 }
 #formNew{
  margin-top:130px;
- margin-left:340px;
+
 }
 .alert-success {
  position:absolute;
  top:200px;
- left:50px;
+ left:20px;
  height:27px;
  text-align: center;
  width:320px;
@@ -47,7 +47,16 @@ html{
 }
 #submitButton{
  margin-top:11px;
- width:386px;
+ width: 360px;
  height: 29px;
  padding-top: 4px;
+}
+
+@media (max-width: 1200px) {
+  #submitButton{
+   margin-top:11px;
+   width: 218px;
+   height: 29px;
+   padding-top: 4px;
+ }
 }

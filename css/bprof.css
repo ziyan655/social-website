@@ -37,7 +37,6 @@ html{
 	color:black;
 	font-family: monospace;
 	margin-bottom:20px;
-	margin-left:20px;
 }
 .bio {
 	font-size:1.1em;
@@ -53,27 +52,16 @@ html{
 	width:400px;
 	padding-top:3px;
 	position:absolute;
-	top:755px;
+	top:635px;
 }
 .container form {
 	position:absolute;
-	top:600px;
+	top:500px;
 }
-#submitButton{
+#button{
 	height:30px;
-	width:105px;
+	width:175px;
 	padding-top:5px;
-	margin-right:30px;
-	position:absolute;
-	left:1030px;
+	margin-left: 40px;
 }
-#submitButtonNew{
-	height:30px;
-	width:105px;
-	padding-top:5px;
-	position:absolute;
-	left:900px;
-}
-.fixed-width { 
-	width:1150px; 
-}
+

@@ -175,8 +175,8 @@ if(!empty($_POST["bcat"])) {
               <div class="container">
               	<form class="form-horizontal" id="formNew" method="post" action="<?php echo htmlspecialchars("abandedit.php");?>">
               		<div class="form-group" >
-              			<label class="control-label col-sm-4" for="uName"><font color="black">Update Band Musical Category</font></label> 	
-              			<div class="col-sm-3">		
+              			<label class="control-label col-sm-4 col-xs-4" for="uName"><font color="black">Update Band Musical Category</font></label> 	
+              			<div class="col-sm-3 col-xs-4">		
               				<input type="text" class="form-control"  value="<?php echo $_POST['bcat']; ?>" name="bcat" >
               				<?php if($echoBcat == 1) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Music category not found</span>';} 
               				else if($echoBcat == 2) {echo'<span class ="alert alert-success" id="inputErr" role = "alert">Music category updated</span>';}
@@ -185,8 +185,8 @@ if(!empty($_POST["bcat"])) {
               		</div>
 
               		<div class="form-group" >
-              			<label class="control-label col-sm-4" for="pass"><font color="black">Add Band Musical Sub-category</font></label> 	
-              			<div class="col-sm-3">		
+              			<label class="control-label col-sm-4 col-xs-4" for="pass"><font color="black">Add Band Musical Sub-category</font></label> 	
+              			<div class="col-sm-3 col-xs-4">		
               				<input type="text" class="form-control" value="<?php echo $_POST['bscat']; ?>" name="bscat"  >
               				<?php if($echoBscat == 1) echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Music sub-category not found</span>';
               				else if($echoBscat == 2) {echo'<span class ="alert alert-success" id="inputErr" role = "alert">Music sub-category updated</span>';}	?>
@@ -194,8 +194,8 @@ if(!empty($_POST["bcat"])) {
               		</div>
 
               		<div class="form-group" >
-              			<label class="control-label col-sm-4" for="pass"><font color="black">Remove Band Musical Sub-category</font></label> 	
-              			<div class="col-sm-3">		
+              			<label class="control-label col-sm-4 col-xs-4" for="pass"><font color="black">Remove Band Musical Sub-category</font></label> 	
+              			<div class="col-sm-3 col-xs-4">		
               				<input type="text" class="form-control" value="<?php echo $_POST['rbscat']; ?>" name="rbscat"  >
               				<?php if($echoRmscat == 1) echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Music sub-category not found</span>';
               				else if($echoRmscat == 2) {echo'<span class ="alert alert-success" id="inputErr" role = "alert">Music sub-category removed</span>';}	?>
@@ -203,8 +203,8 @@ if(!empty($_POST["bcat"])) {
               		</div>	
 
               		<div class="form-group" >
-              			<label class="control-label col-sm-4" for="pass"><font color="black">Update Official Website</font></label> 	
-              			<div class="col-sm-3">		
+              			<label class="control-label col-sm-4 col-xs-4" for="pass"><font color="black">Update Official Website</font></label> 	
+              			<div class="col-sm-3 col-xs-4">		
               				<input type="text" class="form-control" value="<?php echo $_POST['web']; ?>" name="web"  >
               				<?php if($echoWeb == 1) echo'<span class ="alert alert-danger" id="inputErr" role = "alert">'.$websiteErr.'</span>';
               				else if($echoWeb == 2) echo'<span class ="alert alert-success" id="inputErr" role = "alert">Official website updated</span>';
@@ -213,8 +213,8 @@ if(!empty($_POST["bcat"])) {
               		</div>
 
               		<div class="form-group" >
-              			<label class="control-label col-sm-4" for="pass"><font color="black">Update Home Page Bio</font></label> 	
-              			<div class="col-sm-4">		
+              			<label class="control-label col-sm-4 col-xs-4" for="pass"><font color="black">Update Home Page Bio</font></label> 	
+              			<div class="col-sm-4 col-xs-4">
               				<textarea class="form-control" placeholder="Write here.." name="bio" rows="2"><?php echo $_POST['bio']; ?></textarea>
               				<?php if($echoBio) echo'<span class ="alert alert-success" id="inputSuc" role = "alert">Bio updated</span>';	?>
               			</div>
@@ -222,7 +222,7 @@ if(!empty($_POST["bcat"])) {
 
 
               		<div class="form-group" >
-              			<div class="col-sm-offset-4 col-sm-6">
+              			<div class="col-sm-offset-4 col-sm-7 col-xs-offset-4">
               				<button type="submit" class="btn btn-success margin" name="submit" id="submitButton" >Update</button>
               			</div>
               		</div>

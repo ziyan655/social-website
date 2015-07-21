@@ -34,43 +34,45 @@
 		</div>
 	</div>
 
-	<div class="container-fluid" id="bgImg">
-		<div class="tab">
-			<table class="table table-hover">
-				<thead>
-					<tr>
-						<td><b>Concert Name</b></td>
-						<td><b>Description</b></td>
-						<td><b>Date</b></td>
-						<td><b>Time</b></td>
-						<td><b>Location</b></td>
-						<td><b>Price</b></td>
-						<td><b>Booking Link</b></td>
-						<td><b>Overall Rating</b></td>
-					</tr>
-				</thead>
-				<tbody>
-					<?php
-					$stmt = $mysqli->prepare("select distinct concertName,Concert.description,eventDate,eventTime,locationName,ticketPrice,bookingSiteLink,overallRating FROM Concert JOIN Location WHERE Concert.locationId=Location.locationId");
-					$stmt->execute();
-					$stmt->bind_result($cname,$description,$date,$time,$location,$price,$booklink,$overalRating);
-					while($stmt->fetch()){
-						echo '<tr>';
-						echo '<td>'.$cname.'</td>';
-						echo '<td>'.$description.'</td>';
-						echo '<td>'.$date.'</td>';
-						echo '<td>'.$time.'</td>';
-						echo '<td>'.$location.'</td>';
-						echo '<td>'.$price.'</td>';
-						echo '<td>'.$booklink.'</td>';
-						echo '<td>'.$overalRating.'</td>';
-						echo '</tr>';
-					}
-					$stmt->close();
-					$mysqli->close();
-					?>
-				</tbody>
-			</table>
+	<div class="container-fluid" >
+		<div class="table-responsive">
+			<div class="tab">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<td><b>Concert Name</b></td>
+							<td><b>Description</b></td>
+							<td><b>Date</b></td>
+							<td><b>Time</b></td>
+							<td><b>Location</b></td>
+							<td><b>Price</b></td>
+							<td><b>Booking Link</b></td>
+							<td><b>Overall Rating</b></td>
+						</tr>
+					</thead>
+					<tbody>
+						<?php
+						$stmt = $mysqli->prepare("select distinct concertName,Concert.description,eventDate,eventTime,locationName,ticketPrice,bookingSiteLink,overallRating FROM Concert JOIN Location WHERE Concert.locationId=Location.locationId");
+						$stmt->execute();
+						$stmt->bind_result($cname,$description,$date,$time,$location,$price,$booklink,$overalRating);
+						while($stmt->fetch()){
+							echo '<tr>';
+							echo '<td>'.$cname.'</td>';
+							echo '<td>'.$description.'</td>';
+							echo '<td>'.$date.'</td>';
+							echo '<td>'.$time.'</td>';
+							echo '<td>'.$location.'</td>';
+							echo '<td>'.$price.'</td>';
+							echo '<td>'.$booklink.'</td>';
+							echo '<td>'.$overalRating.'</td>';
+							echo '</tr>';
+						}
+						$stmt->close();
+						$mysqli->close();
+						?>
+					</tbody>
+				</table>
+			</div>
 		</div>
 	</div>
 </body>

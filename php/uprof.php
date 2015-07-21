@@ -18,12 +18,16 @@
 	include ("include.php");
 	//must use GET method, so queries can be stored in the url. then we can fetch data according to the user id
 	//POST method stores user id in $POST[] array which would be gone after submitting from another page. 
+
 	$uid = $_GET["userid"];
 	$suid = $_SESSION["userid"];
 	$stmt = $mysqli->prepare("select wall from userProfile where userId = ?");
+
 	$stmt->bind_param("i", $uid);
+
 	$stmt->execute();
 	$stmt->bind_result($wall);
+
 	$stmt->fetch();
 	$stmt->close();
 
@@ -116,6 +120,7 @@
 		$ratingArr[$i] = $sco;
 		$i++;
 	}
+
 	$stmt->close();
 	?>
 
@@ -144,50 +149,91 @@
 	</div>
 
 	<div class ="container">
-		<div class="fixed-widthProf">
-			<p class = "wall"> <?php echo $wall;?></p>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12">
+				<p class = "wall"> <?php echo $wall;?></p>
+			</div>
 		</div>	
 	</div>
 
 	<div class ="container">
-		<div class="fixed-widthProf">
-			<p class = "prof"> Name: <?php echo $name;?></p>
-			<p class = "prof"> Year of Birth: <?php echo $yob;?></p>
-			<p class = "prof"> Home City: <?php echo $city;?></p>
-			<p class = "prof"> Home Country: <?php echo $country;?></p>
-			<p class = "prof"> Liked Artists: <?php 
-			echo "| ";
-			foreach($artNameArr as $s) {
-				echo $s." | ";
-			}
-			?></p>
-			<p class = "prof"> Liked Bands: <?php 
-			echo "| ";
-			foreach($bandNameArr as $s) {
-				echo $s." | ";
-			}
-			?></p>
-			<p class = "prof"> Musical Tastes: <?php 
-			echo "| ";
-			foreach($mcatNameArr as $s) {
-				echo $s." | ";
-			}
-			?></p>
-			<p class = "prof"> Currently Following: <?php 
-			echo "| ";
-			foreach($fNameArr as $s) {
-				echo $s." | ";
-			}
-			?></p>
-			<p class = "prof"> Concert Attendance: <?php 
-			echo "| ";
-			foreach($attNameArr as $s) {
-				echo $s." | ";
-			}
-			?></p>
-			<p class = "prof"> Number of followers: <?php echo $_SESSION['fanCount'];?></p>
-		</div>	
-	</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12">
+				<p class = "prof"><b> Name: </b><?php echo $name;?></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12">
+				<p class = "prof"><b> Year of Birth: </b><?php echo $yob;?></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12">
+				<p class = "prof"><b> Home City: </b><?php echo $city;?></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12">
+				<p class = "prof"><b> Home Country: </b><?php echo $country;?></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12">
+				<p class = "prof"><b> Liked Artists: </b><?php 
+				echo "| ";
+				foreach($artNameArr as $s) {
+					echo $s." | ";
+				}
+				?></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12">
+				<p class = "prof"><b> Liked Bands: </b><?php 
+				echo "| ";
+				foreach($bandNameArr as $s) {
+					echo $s." | ";
+				}
+				?></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12">
+				<p class = "prof"> <b> Musical Tastes: </b><?php 
+				echo "| ";
+				foreach($mcatNameArr as $s) {
+					echo $s." | ";
+				}
+				?></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12">
+				<p class = "prof"> <b>Currently Following: </b><?php 
+				echo "| ";
+				foreach($fNameArr as $s) {
+					echo $s." | ";
+				}
+				?></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12">
+				<p class = "prof"> <b>Concert Attendance: </b><?php 
+				echo "| ";
+				foreach($attNameArr as $s) {
+					echo $s." | ";
+				}
+				?></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12">
+				<p class = "prof"> <b>Number of followers: </b><?php echo $_SESSION['fanCount'];?></p>
+			</div>
+		</div>
+	</div>	
+
 
 
 	<div class ="container">
@@ -283,10 +329,14 @@
 		<div class="container">
 			<form class="form-inline" role = "form" method="POST" action="uprof.php?userid=<?php echo $uid?>">  
 				<div class="form-group" >
-					<button type="submit" class="btn margin btn-primary <?php if($Followed) {echo 'disabled';}?> submitButton" name="submitFollow" id="submitButton" ><?php if($Followed) echo 'Followed'; else echo 'Follow';?></button>
+					<div class="col-xs-offset-1">
+						<button type="submit" class="btn margin btn-primary <?php if($Followed) {echo 'disabled';}?> submitButton" name="submitFollow" id="submitButton" ><?php if($Followed) echo 'Followed'; else echo 'Follow';?></button>
+					</div>
 				</div>
 				<div class="form-group" >
-					<button type="submit" class="btn margin btn-primary <?php if($Bookmarked) {echo 'disabled';}?> submitButton" name="submitBookm" id="submitButtonNew"><?php if($Bookmarked) echo 'Bookmarked'; else echo 'Bookmark';?></button>
+					<div class="col-xs-offset-1">
+						<button type="submit" class="btn margin btn-primary <?php if($Bookmarked) {echo 'disabled';}?> submitButton" name="submitBookm" id="submitButtonNew"><?php if($Bookmarked) echo 'Bookmarked'; else echo 'Bookmark';?></button>
+					</div>
 				</div>
 			</form>
 		</div>
@@ -318,7 +368,9 @@
 		<div class="container">
 			<form class="form-inline" role = "form" method="POST" action="uprof.php?userid=<?php echo $uid?>">  
 				<div class="form-group" >
-					<button type="submit" class="btn margin btn-primary <?php if($Followed) {echo 'disabled';}?> submitButton" name="submitFollow" id="submitButton" ><?php if($Followed) echo 'Followed'; else echo 'Follow';?></button>
+					<div class="col-xs-offset-1">
+						<button type="submit" class="btn margin btn-primary <?php if($Followed) {echo 'disabled';}?> submitButton" name="submitFollow" id="submitButton" ><?php if($Followed) echo 'Followed'; else echo 'Follow';?></button>
+					</div>
 				</div>
 			</form>
 		</div>

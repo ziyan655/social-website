@@ -134,41 +134,63 @@
 
 
 	<div class ="container" >
-		<div class="fixed-width">
-			<p class = "bio"> <?php echo $bio;?></p>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12">
+				<p class = "bio"> <?php echo $bio;?></p>
+			</div>
 		</div>
 	</div>
 
 	<div class ="container" >
-		<div class="fixed-width">
-			<p class = "prof"> Past Concerts: <?php
-			echo "| ";
-			foreach ( $cNameArr as $s ) {
-				echo $s." | ";
-			}
-			?></p>
-			<p class = "prof"> Future Concerts: <?php
-			echo "| ";
-			foreach ( $cfNameArr as $s ) {
-				echo $s." | ";
-			}
-			?></p>
-			<p class = "prof"> Band Musical Category: <?php echo $bmcatname;?></p>
-			<p class = "prof"> Band Musical Sub-Category: <?php
-			echo "| ";
-			foreach ( $bmscatNameArr as $s ) {
-				echo $s." | ";
-			}
-			?></p>
-			<p class = "prof"> Band Members: <?php
-			echo "| ";
-			foreach ( $bandMemArr as $s ) {
-				echo $s." | ";
-			}
-			?></p>
-			<p class = "prof"> Total number of fans: <?php echo $fanCount;?></p>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12">
+				<p class = "prof"> Past Concerts: <?php
+				echo "| ";
+				foreach ( $cNameArr as $s ) {
+					echo $s." | ";
+				}
+				?></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12">
+				<p class = "prof"> Future Concerts: <?php
+				echo "| ";
+				foreach ( $cfNameArr as $s ) {
+					echo $s." | ";
+				}
+				?></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12">
+				<p class = "prof"> Band Musical Category: <?php echo $bmcatname;?>
+				</p>
+				<p class = "prof"> Band Musical Sub-Category: <?php
+				echo "| ";
+				foreach ( $bmscatNameArr as $s ) {
+					echo $s." | ";
+				}
+				?></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12">
+				<p class = "prof"> Band Members: <?php
+				echo "| ";
+				foreach ( $bandMemArr as $s ) {
+					echo $s." | ";
+				}
+				?></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12">
+				<p class = "prof"> Total number of fans: <?php echo $fanCount;?></p>
+			</div>
 		</div>
 	</div>
+
 
 
 	<?php
@@ -192,13 +214,17 @@
 		$stmt->close();
 		?>
 
-		<div class="container">
+		<div class="container">                                       
 			<form class="form-inline" role = "form" method="POST" action="bprof.php?bandid=<?php echo $bid?>">
 				<div class="form-group" >
-					<button type="submit" class="btn margin btn-primary <?php if ( $Followed ) {echo 'disabled';}?> submitButton" name="submitFollow" id="submitButton" ><?php if ( $Followed ) echo 'Followed'; else echo 'Follow';?></button>
+					<div class="col-xs-offset-0">
+						<button type="submit" class="btn margin btn-primary <?php if ( $Followed ) {echo 'disabled';}?> submitButton" name="submitFollow" id="button" style="width:175px"><?php if ( $Followed ) echo 'Followed'; else echo 'Follow';?></button>
+					</div>
 				</div>
 				<div class="form-group" >
-					<button type="submit" class="btn margin btn-primary <?php if ( $Bookmarked ) {echo 'disabled';}?> submitButton" name="submitBookm" id="submitButtonNew"><?php if ( $Bookmarked ) echo 'Bookmarked'; else echo 'Bookmark';?></button>
+					<div class="col-xs-offset-0">
+						<button type="submit" class="btn margin btn-primary <?php if ( $Bookmarked ) {echo 'disabled';}?> submitButton" name="submitBookm" id="button"><?php if ( $Bookmarked ) echo 'Bookmarked'; else echo 'Bookmark';?></button>
+					</div>
 				</div>
 			</form>
 		</div>
@@ -231,7 +257,9 @@
 		<div class="container">
 			<form class="form-inline" role = "form" method="POST" action="bprof.php?bandid=<?php echo $bid?>">
 				<div class="form-group" >
-					<button type="submit" class="btn margin btn-primary <?php if ( $Followed ) {echo 'disabled';}?> submitButton" name="submitFollow" id="submitButton" ><?php if ( $Followed ) echo 'Followed'; else echo 'Follow';?></button>
+					<div class="col-xs-offset-0">
+						<button type="submit" class="btn margin btn-primary <?php if ( $Followed ) {echo 'disabled';}?> submitButton" name="submitFollow" id="button" ><?php if ( $Followed ) echo 'Followed'; else echo 'Follow';?></button>
+					</div>
 				</div>
 			</form>
 		</div>

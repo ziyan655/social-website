@@ -36,7 +36,7 @@ html{
 	color:black;
 	font-family: monospace;
 	margin-bottom:20px;
-	margin-left:20px;
+
 }
 .wall {
 	font-size:1.1em;
@@ -47,23 +47,20 @@ html{
 	margin-bottom:105px;
 }
 .container form {
-	position:absolute;
 	top:750px;
+	margin-top: 30px;
 }
 #submitButton{
 	height:30px;
-	width:105px;
+	width:165px;
 	padding-top:5px;
-	margin-right:30px;
-	position:absolute;
-	left:1030px;
+	margin-left: 40px;
 }
 #submitButtonNew{
 	height:30px;
-	width:105px;
+	width:165px;
 	padding-top:5px;
-	position:absolute;
-	left:900px;
+	margin-left: 40px;
 }
 .alert-success {
 	height:28px;
@@ -71,8 +68,6 @@ html{
 	width:400px;
 	padding-top:3px;
 	position:absolute;
-	top:755px;
+	top:845px;
 }
-.fixed-width { 
-	width:1150px; 
-}
+

@@ -27,7 +27,6 @@
 	color:black;
 	font-family: monospace;
 	margin-bottom:10px;
-	margin-left:20px;
 }
 .wall {
 	font-size:1.1em;
@@ -67,27 +66,26 @@
 }
 #submitButton{
 	height:30px;
-	width:105px;
+	width:165px;
 	padding-top:5px;
 	margin-right:30px;
-	position:absolute;
-	left:1030px;
 }
 #submitButtonNew{
 	height:30px;
-	width:105px;
+	width:165px;
 	padding-top:5px;
-	position:absolute;
-	left:900px;
 }
+.container form {
+	top:850px;
+}
+
 .alert-success {
 	height:28px;
 	text-align: center;
 	width:400px;
 	padding-top:3px;
 	position:absolute;
-	top:250px;
-	margin-left:736px;
+	top:1000px;
 }
 body{
 	background-image: url("../img/bg.jpg");
@@ -105,7 +103,4 @@ html{
 }
 table, th, td {
 	border: 1px solid black;
-}
-.fixed-widthProf { 
-	width:1150px; 
 }

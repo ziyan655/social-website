@@ -20,7 +20,7 @@
 	$stmt->execute();
 	$stmt->bind_result($var);
 	if ($stmt->fetch()) {
-		echo '<div class="alert alert-success" role="alert">Your Trust Score is&nbsp'.$var.'.&nbsp&nbsp&nbspYou can add concerts to our system. Thanks for your contribution!</div>';
+		echo '<div class="alert alert-success">Your Trust Score is&nbsp'.$var.'.&nbsp&nbsp&nbspYou can add concerts to our system. Thanks for your contribution!</div>';
 		echo '<script type="text/javascript">
 		function redirect()
 		{

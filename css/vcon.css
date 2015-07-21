@@ -45,10 +45,6 @@ html{
 	font-family: monospace;
 }
 
-#bgImg{
-	background-image: url("http://localhost/website/3.jpg");
-	background-size: cover;
-}
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
 	background-color: white;
 	border:1px solid black;

@@ -295,8 +295,8 @@
 	<div class="container">
 		<form class="form-horizontal" id="formNew" method="post" action="<?php echo htmlspecialchars("areg.php");?>">
 			<div class="form-group">	
-				<label class="control-label col-sm-3"  for="Name"><font color="black">Artist Name<font color="red">*</font></font></label> 	
-				<div class="col-sm-3">		
+				<label class="control-label col-sm-3 col-xs-3 col-sm-offset-1"  for="Name"><font color="black">Artist Name<font color="red">*</font></font></label> 	
+				<div class="col-sm-3 col-xs-6">		
 					<input type="text" class="form-control" value="<?php echo $_POST['name']; ?>" name="name">
 					<?php if($nameErr!="") {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">'.$nameErr.'</span>';}
 					else if($echoSucc) { echo'<span class ="alert alert-success" role = "alert">Successfully registered!</span>';} 
@@ -305,8 +305,8 @@
 			</div>
 
 			<div class="form-group" >
-				<label class="control-label col-sm-3" for="email"><font color="black">Email<font color="red">*</font></font></label>
-				<div class="col-sm-3">
+				<label class="control-label col-sm-3 col-xs-3 col-sm-offset-1" for="email"><font color="black">Email<font color="red">*</font></font></label>
+				<div class="col-sm-3 col-xs-6">
 					<input type="email" class="form-control" value="<?php echo $_POST['email']; ?>"name="email" >
 					<?php if($echoEmail == 1) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">'.$emailErr.'</span>';}
 					else if($echoEmail == 2) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Email already exists</span>';}
@@ -315,8 +315,8 @@
 			</div>
 
 			<div class="form-group" >
-				<label class="control-label col-sm-3" for="uName"><font color="black">Username<font color="red">*</font></font></label> 	
-				<div class="col-sm-3">		
+				<label class="control-label col-sm-3 col-xs-3 col-sm-offset-1" for="uName"><font color="black">Username<font color="red">*</font></font></label> 	
+				<div class="col-sm-3 col-xs-6">		
 					<input type="text" class="form-control"  value="<?php echo $_POST['username']; ?>" name="username" >
 					<?php if($echoUname == 1) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">'.$unameErr.'</span>';}
 					else if($echoUname == 2) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Username already exists</span>';}
@@ -325,24 +325,24 @@
 			</div>
 
 			<div class="form-group" >
-				<label class="control-label col-sm-3" for="pass"><font color="black">Password<font color="red">*</font></font></label> 	
-				<div class="col-sm-3">		
+				<label class="control-label col-sm-3 col-xs-3 col-sm-offset-1" for="pass"><font color="black">Password<font color="red">*</font></font></label> 	
+				<div class="col-sm-3 col-xs-6">		
 					<input type="password" class="form-control" value="<?php echo $_POST['password']; ?>" name="password"  >
 					<?php if($echoPass == 1) echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Password is required</span>';?>
 				</div>
 			</div>
 
 			<div class="form-group">
-				<label class="control-label col-sm-3" for="uName"><font color="black">Home Country<font color="red"></font></font></label> 	
-				<div class="col-sm-3">		
+				<label class="control-label col-sm-3 col-xs-3 col-sm-offset-1" for="uName"><font color="black">Home Country<font color="red"></font></font></label> 	
+				<div class="col-sm-3 col-xs-6">		
 					<input type="text" class="form-control"  value="<?php echo $_POST['country']; ?>"name="country"  >
 					<?php if($echoCountry == 1) echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Country not found</span>';?>
 				</div>
 			</div>
 
 			<div class="form-group" >
-				<label class="control-label col-sm-3" for="category"><font color="black">Musical Category<font color="red">*</font></font></label> 	
-				<div class="col-sm-3">		
+				<label class="control-label col-sm-3 col-xs-3 col-sm-offset-1" for="category"><font color="black">Musical Category<font color="red">*</font></font></label> 	
+				<div class="col-sm-3 col-xs-6">		
 					<input type="text" class="form-control" value="<?php echo $_POST['category']; ?>"name="category"  >
 					<?php if($echoMcat == 1) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Music Category is required</span>';}
 					else if($echoMcat == 2) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Music Category not found</span>';}
@@ -351,61 +351,61 @@
 			</div>
 
 			<div class="form-group" >
-				<label class="control-label col-sm-3" for="subcat"><font color="black">Musical Subcategory</font></label>  	
-				<div class="col-sm-3">		
+				<label class="control-label col-sm-3 col-xs-3 col-sm-offset-1" for="subcat"><font color="black">Musical Subcategory</font></label>  	
+				<div class="col-sm-3 col-xs-6">		
 					<input type="text" class="form-control" value="<?php echo $_POST['scategory']; ?>" name="scategory" >
 					<?php if($echoMscat == 1) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Music Sub-Category not found</span>';}?>
 				</div>
 			</div>
 
 			<div class="form-group" >
-				<label class="control-label col-sm-3" for="offwebsite"><font color="black">Official Website</font></label>  	
-				<div class="col-sm-3">		
+				<label class="control-label col-sm-3 col-xs-3 col-sm-offset-1" for="offwebsite"><font color="black">Official Website</font></label>  	
+				<div class="col-sm-3 col-xs-6">		
 					<input type="text" class="form-control" value="<?php echo $_POST['web']; ?>" name="web" >
 					<?php if($echoWeb == 1) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Invalid URL</span>';}?>
 				</div>
 			</div>
 
 			<div class="form-group" >
-				<label class="control-label col-sm-3" for="bandbelong"><font color="black">Member of which Band</font></label> 	 	
-				<div class="col-sm-3">		
+				<label class="control-label col-sm-3 col-xs-3 col-sm-offset-1" for="bandbelong"><font color="black">Member of which Band</font></label> 	 	
+				<div class="col-sm-3 col-xs-6">		
 					<input type="text" class="form-control" value="<?php echo $_POST['bandbelong']; ?>" name="bandbelong"  >
 					<?php if($echoBand == 1) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Band not found</span>';}?>
 				</div>
 			</div>
 
 			<div class="form-group" >
-				<label class="control-label col-sm-3" for="bmc"><font color="black">Band Music Category</font></label>  	
-				<div class="col-sm-3">		
+				<label class="control-label col-sm-3 col-xs-3 col-sm-offset-1" for="bmc"><font color="black">Band Music Category</font></label>  	
+				<div class="col-sm-3 col-xs-6">		
 					<input type="text" class="form-control" value="<?php echo $_POST['bmc']; ?>" name="bmc"   >
 					<?php if($echoBmcat == 1) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Band Music Category not found</span>';}?>
 				</div>
 			</div>
 
 			<div class="form-group" >
-				<label class="control-label col-sm-3" for="bmsc"><font color="black">Band Music Sub-Category</font></label>  	
-				<div class="col-sm-3">		
+				<label class="control-label col-sm-3 col-xs-3 col-sm-offset-1" for="bmsc"><font color="black">Band Music Sub-Category</font></label>  	
+				<div class="col-sm-3 col-xs-6">		
 					<input type="text" class="form-control" value="<?php echo $_POST['bmsc']; ?>" name="bmsc" >
 					<?php if($echoBmscat == 1) {echo'<span class ="alert alert-danger" id="inputErr" role = "alert">Band Music Sub-Category not found</span>';}?>
 				</div>
 			</div>
 
 			<div class="form-group" >
-				<label class="control-label col-sm-3" for="bio"><font color="black">Bio</font></label>
-				<div class="col-sm-5">	
+				<label class="control-label col-sm-3 col-xs-3 col-sm-offset-1" for="bio"><font color="black">Bio</font></label>
+				<div class="col-sm-3 col-xs-6">	
 					<textarea class="form-control" placeholder="Bio goes here.." name="bio" rows="2"><?php echo $_POST['bio']; ?></textarea>
 				</div>
 			</div>
 
 			<div class="form-group" >
-				<label class="control-label col-sm-3" for="wall"><font color="black">First Status Wall for Fans</font></label>
-				<div class="col-sm-5">
+				<label class="control-label col-sm-3 col-xs-3 col-sm-offset-1" for="wall"><font color="black">First Status Wall for Fans</font></label>
+				<div class="col-sm-3 col-xs-6">
 					<textarea class="form-control" placeholder="Write something here.." name="wall" rows="2"><?php echo $_POST['wall']; ?></textarea>
 				</div>
 			</div>
 
 			<div class="form-group" >
-				<div class="col-sm-offset-3 col-sm-6">
+				<div class="col-sm-offset-4 col-sm-8 col-xs-offset-3 col-xs-11">
 					<button type="submit" class="btn btn-success margin" name="submit" id="submitButton" >Register</button>
 				</div>
 			</div>

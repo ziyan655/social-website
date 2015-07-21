@@ -39,40 +39,56 @@
 	</nav>
 
 	<div class="container">
-		<div class="fixed-widthDes">
-			<p id="description">
-				<font color="black">UConcert is a music social website.<br /> Learn
-					all the information about ongoing concerts and interact with users
-					and artists.<br /> Login and get started!
-				</font>
-			</p>
+		
+		<div class="row" style="margin-top:70px">
+			<div class="col-sm-11 ">
+				<p id="description">
+					UConcert is a music social website
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-11 ">
+				<p id="description">
+					Learn all the information about ongoing concerts and interact with users and artists
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-11 ">
+				<p id="description">
+					Login and get started!
+				</p>
+			</div>
 		</div>
 
 
-		<div class="fixed-widthForm">
-			<form class="form-horizontal" action="index.php" method="POST"  id="loginForm">
 
-				<div class="form-group">
-					<div class="col-sm-4">	
-						<input type="text" placeholder="Username"
-						value="user" class="form-control"
-						name="username" />
-					</div>
-				</div>
+		<form class="form-horizontal" action="index.php" method="POST"  id="">
 
-				<div class="form-group">
-					<div class="col-sm-4">	
-						<input type="password" placeholder="Password" value="user" class="form-control" name="password" />
-					</div>
+			<div class="form-group">
+				<label class="control-label col-xs-3 col-xs-offset-1 col-sm-offset-1" for="userinput">Username</label>
+				<div class="col-sm-3 col-xs-6">	
+					<input type="text" placeholder="Username"
+					value="user" class="form-control"
+					name="username" id="userinput" />
 				</div>
+			</div>
 
-				<div class="form-group" >
-					<div class="col-sm-3">	
-						<button type="submit" class="btn btn-success " id="submitButton">Log In</button>
-					</div>
+			<div class="form-group">
+				<label class="control-label col-xs-3  col-xs-offset-1 col-sm-offset-1" for="passw">Password</label>
+				<div class="col-sm-3 col-xs-6">
+					<input type="password" placeholder="Password" value="user" class="form-control" name="password" id="passw"/>
 				</div>
-			</form>
-		</div>
+			</div>
+
+			<div class="form-group" >
+				<div class="col-xs-6 col-xs-offset-4 col-sm-offset-4">	
+					<button type="submit" class="btn btn-success " id="submitButton">Log In</button>
+				</div>
+			</div>
+		</form>
+
 	</div>
 
 	<?php
@@ -110,12 +126,12 @@ if ($stmt = $mysqli->prepare ( "select artistId, userName,password,artistName fr
 		{
 			window.location="php/ahome.php";
 		}
-		setTimeout(redirect, 3000);
+		setTimeout(redirect, 700);
 		</script>';
 		echo '<div class="container"><div class="alert alert-success" role="alert">Artist logging in...</div></div>';
 	} else {
 		if (isset ($_POST ["username"] ) && $flag != 1) {
-			sleep (1); // pause a bit to help prevent brute force attacks
+			//sleep (1); // pause a bit to help prevent brute force attacks
 			echo '<div class="container"><div class ="alert alert-danger" role = "alert">username or password is incorrect, please try again</br>user demo login:<i><b>user</b></i></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppassword:<i><b>user</b></i></br>artist demo login:<i><b>artist</b></i></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppassword:<i><b>artist</b></i></div></div>';
 		}
 	}
@@ -132,10 +148,10 @@ if ($flag) {
 	{
 		window.location="php/uhome.php";
 	}
-	setTimeout(redirect, 3000);
+	setTimeout(redirect, 700);
 	</script>';
 
-	echo '<div class="container"><div class="alert alert-success" role="alert">User logging in...</div></div>';
+	echo '<div class="container"><div class="alert alert-success" role="alert">User signing in...</div></div>';
 }
 
 $mysqli->close ();
